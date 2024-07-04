@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь Дежурств</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <ul>
+                <h2>Добавить дежурного</h2>
+                <form action="/add" method="post">
+                    <label>Дата:</label>
+                    <input type="date" name="date" value="выберите дату" required>
+                    <label>Сотрудник:</label>
+                    <select name="employee_id">
+                        <option value="">Выбрать случайного</option>
+                        {{ employees_options }}
+                    </select>
+                    <button type="submit">Добавить</button>
+                </form>
+
+                <h2>Добавить сотрудника</h2>
+                <form action="/add_employee" method="post">
+                    <label>Имя сотрудника:</label>
+                    <input type="text" name="name" required>
+                    <button type="submit">Добавить</button>
+                </form>
+            </ul>
+        </div>
+        <div class="right-column">
+            <h1>Список дежурных</h1>
+            <ul>
+                {{ duties }}
+            </ul>
+            <h1>Список сотрудников</h1>
+            <ul>
+                {{ employees }}
+            </ul>
+        </div>
+        <div class="logout">
+            <form method="get" action="/logout">
+                <button type="submit">Выйти</button>
+            </form>
+        </div>
+
+    </div>
+    {{ message }}
+</body>
+</html>

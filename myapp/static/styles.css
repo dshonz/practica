@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('/static/background.png') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    background: #f7f5f58e;
+    border-radius: 10px;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.left-column {
+    flex: 1;
+    padding: 0;
+    background: #f7f5f58e;
+    border-radius: 10px;
+}
+
+.left-column ul {
+    flex: 1;
+    line-height: 50px;
+    width: 500px;
+    height: 300px;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+.right-column {
+    flex: 1;
+    margin-left: 20px;
+}
+.right-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+.right-column li {
+    margin-bottom: 10px;
+    
+}
+.logout {
+    text-align: right;
+    margin-bottom: 20px;
+}
